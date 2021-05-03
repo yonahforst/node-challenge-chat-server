@@ -24,17 +24,18 @@ Please ask your mentors for access to this repository.
 
 - [ ] You should have completed at least Level 1 of the Quote Server challenge before attempting this challenge.
 
-## Want to run your code on the internet?
+- [ ] Have nodemon globally installed [npm install -g nodemon] -
+You can find the details how to install nodemon globally here: https://syllabus.migracode.org/course-content/nodejs/week-1#step-7-setting-up-server-to-listen-to-changes-automatically
 
-If you want to share your server with other people the easiest way to do this is to use Glitch
+## Installation
 
-- [ ] Make sure you're logged in to https://glitch.com/
-- [ ] Remix https://glitch.com/~cyf-chat-start
-- [ ] Name your new server `yourname-chat-server`
-- [ ] Make sure you're logged in so that it saves
-- [ ] Check that it is working by making a request to `/`
-- [ ] Take time to read the comments
-- [ ] Copy the code you've written to Glitch
+To start work with this project, follow the next steps:
+
+- Fork the repository to your GitHub account.
+- Clone it to your local computer by `git clone`.
+- Use `npm install`, it will allow you install all modules listed as dependencies in package.json
+- With `npm start`, you will run your react app.
+- It should automatically open `http://localhost:3000/` in your browser
 
 ## Level 1 Challenge - make the chat server
 
@@ -122,9 +123,7 @@ Note: only do this if you have done all other Node homework this week - includin
 
 - [ ] Make a very simple React app called chat-react-app
 
-Note: Do not use `create-react-app` if you want your React code to be code-reviewed! Instead, you should:
-
-- [ ] fork our starting repo. See "How should I start my React app", below.
+Note: use `npx create-react-app chat-react-app`
 
 #### Your UI should at least:
 
@@ -143,21 +142,7 @@ Note: Do not use `create-react-app` if you want your React code to be code-revie
 - [ ] You'll have to enable CORS on the express app (see note below)
   - For how to post JSON, Read ["Using Fetch", on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [ ] Host your react app on netlify
-- [ ] Attach the link in your google classroom submission (along with your glitch server url)
-
-#### How should I start my React app?
-
-To make code review easier for us, please:
-
-- [ ] fork our starting repo. (You can later create a PR when you want a code review.)
-
-The repo is here: https://github.com/CodeYourFuture/cyf-chat-react
-
-- [ ] Follow the "Making a Pull Request" guide on https://codeyourfuture.github.io/syllabus-master/others/making-a-pull-request.html
-
-- [ ] Then run `npm install` after opening a terminal in the new project directory.
-
-- Note that this repo was made by simply running `create-react-app` exactly as you have done in the past. There is nothing special about it!
+- [ ] Attach the link in your zoom classroom submission (along with the netlify URL)
 
 ### Example screenshot of Simple React app
 
@@ -168,10 +153,6 @@ Here's an example of how your react app might look.
 #### Enabling CORS on the Express app
 
 You'll have to install and enable CORS on your server in order to allow your JSON to be loaded from a different server than your React app has been loaded from.
-
-(Your react app has probably been loaded from the `netlify.com` domain and your server is at `glitch.me`).
-
-On your express project on glitch, edit your `package.json` to add a dependency for the latest version of cors (e.g. `"cors": "^2.8.5"`)
 
 Then in your `server.js` add...
 
