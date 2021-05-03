@@ -62,14 +62,6 @@ Each chat message is an object with the following properties:
 | `from` | string | "Neill"  |
 | `text` | string | "hi CYF! |
 
-## Go ahead!
-
-If you think you know how to do that, go ahead!
-
-Try to use what you know to do this challenge on your own. It does not require any new knowledge.
-
-You may find useful the [express cheatsheet](https://github.com/nbogie/express-notes/blob/master/express-cheatsheet.md)
-
 ## End of Level 1 challenge!
 
 Well done!
@@ -144,12 +136,6 @@ Note: use `npx create-react-app chat-react-app`
 - [ ] Host your react app on netlify
 - [ ] Attach the link in your zoom classroom submission (along with the netlify URL)
 
-### Example screenshot of Simple React app
-
-Here's an example of how your react app might look.
-
-![Example Screenshot of React App](./screenshots/example_react_chat_app.png)
-
 #### Enabling CORS on the Express app
 
 You'll have to install and enable CORS on your server in order to allow your JSON to be loaded from a different server than your React app has been loaded from.
@@ -162,8 +148,7 @@ and
 
 `app.use(cors())`
 
-Read more or CORS [here](https://codeyourfuture.github.io/syllabus-master/others/cors.html)
-and in CORS in Express [here](https://expressjs.com/en/resources/middleware/cors.html).
+Read more about CORS in Express [here](https://expressjs.com/en/resources/middleware/cors.html).
 
 ### Spoiler: Correct Routes
 
