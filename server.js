@@ -67,6 +67,8 @@ app.post('/messages', function (request, response) {
     text: request.body.text,
   }
 
+  // add the current time to the message
+  message.timeSent = new Date()
 
   // if message is invalid, return status 400
   if (!isValidMessage(message)) {
