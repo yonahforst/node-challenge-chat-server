@@ -25,6 +25,24 @@ app.get('/messages', function (request, response) {
   response.send(messages)
 })
 
+// finds and returns messages containing the search term from query params
+app.get('/messages/search', function (request, response) {
+  // get search term from query params
+  const searchTerm = request.query.text.toLowerCase()
+  // find messages containing that term
+  const results = messages.filter(m => m.text.toLocaleLowerCase().includes(searchTerm))
+  // return them
+  response.send(results)
+})
+
+// returns the most recent 10 messages
+app.get('/messages/latest', function (request, response) {
+  // get the last 10 messages
+  const results = messages.slice(-10)
+  // return them
+  response.send(results)
+})
+
 // get a single message from the data store (if it exists)
 // otherwise return 404 not found
 app.get('/messages/:id', function (request, response) {
